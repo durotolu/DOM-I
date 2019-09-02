@@ -74,3 +74,21 @@ paragraphText[4].innerText = siteContent['main-content']['vision-content'];
 
 let lastImage = document.querySelector('#middle-img');
 lastImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+let anchorLength = document.querySelectorAll('a').length;
+for (let i=0; i<anchorLength; i++) {
+  anchor[i].style.color = 'green';
+}
+
+let lastAnchor = document.createElement('a');
+lastAnchor.textContent = 'Whatever';
+lastAnchor.style.color = 'green';
+
+let firstAnchor = document.createElement('a');
+firstAnchor.textContent = 'You want';
+firstAnchor.style.color = 'green';
+
+let navigation = document.querySelector('nav');
+navigation.appendChild(lastAnchor);
+navigation.prepend(firstAnchor);
