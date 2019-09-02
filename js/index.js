@@ -63,7 +63,7 @@ mainText[0].innerText = siteContent['main-content']['features-h4'];
 mainText[1].innerText = siteContent['main-content']['about-h4'];
 mainText[2].innerText = siteContent['main-content']['services-h4'];
 mainText[3].innerText = siteContent['main-content']['product-h4'];
-mainText[4].innerText = siteContent['main-content']['vision-h4'];
+mainText[4].innerText = siteContent['main-content']['vision-h4']; 
 
 let paragraphText = document.querySelectorAll('.main-content .text-content p');
 paragraphText[0].innerText = siteContent['main-content']['features-content'];
@@ -75,6 +75,16 @@ paragraphText[4].innerText = siteContent['main-content']['vision-content'];
 let lastImage = document.querySelector('#middle-img');
 lastImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+let contact = document.querySelector('.contact h4');
+contact.innerText = siteContent['contact']['contact-h4'];
+
+let contactBody = document.querySelectorAll('.contact p');
+contactBody[0].innerText = siteContent['contact']['address'];
+contactBody[1].innerText = siteContent['contact']['phone'];
+contactBody[2].innerText = siteContent['contact']['email'];
+
+let foot = document.querySelector('footer p');
+foot.innerText = siteContent['footer']['copyright']
 
 let anchorLength = document.querySelectorAll('a').length;
 for (let i=0; i<anchorLength; i++) {
