@@ -48,3 +48,13 @@ anchor[2].innerText = 'Vision';
 anchor[3].innerText = 'Features';
 anchor[4].innerText = 'About';
 anchor[5].innerText = 'Contact';
+
+let button = document.querySelector('.cta-text button');
+button.textContent = 'Get Started'
+
+let domText = document.querySelector('.cta-text h1');
+domText.innerText = 'DOM\nIS\nAWESOME';
+
+let circle = document.querySelector('#cta-img');
+circle.setAttribute('src', siteContent["cta"]["img-src"]);
+
