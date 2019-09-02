@@ -58,3 +58,19 @@ domText.innerText = 'DOM\nIS\nAWESOME';
 let circle = document.querySelector('#cta-img');
 circle.setAttribute('src', siteContent["cta"]["img-src"]);
 
+let mainText = document.querySelectorAll('.main-content .text-content h4');
+mainText[0].innerText = siteContent['main-content']['features-h4'];
+mainText[1].innerText = siteContent['main-content']['about-h4'];
+mainText[2].innerText = siteContent['main-content']['services-h4'];
+mainText[3].innerText = siteContent['main-content']['product-h4'];
+mainText[4].innerText = siteContent['main-content']['vision-h4'];
+
+let paragraphText = document.querySelectorAll('.main-content .text-content p');
+paragraphText[0].innerText = siteContent['main-content']['features-content'];
+paragraphText[1].innerText = siteContent['main-content']['about-content'];
+paragraphText[2].innerText = siteContent['main-content']['services-content'];
+paragraphText[3].innerText = siteContent['main-content']['product-content'];
+paragraphText[4].innerText = siteContent['main-content']['vision-content'];
+
+let lastImage = document.querySelector('#middle-img');
+lastImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
