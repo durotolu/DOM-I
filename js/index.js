@@ -83,6 +83,9 @@ contactBody[0].innerText = siteContent['contact']['address'];
 contactBody[1].innerText = siteContent['contact']['phone'];
 contactBody[2].innerText = siteContent['contact']['email'];
 
+let contactColor = document.querySelector('.contact');
+contactColor.style.color = 'red';
+
 let foot = document.querySelector('footer p');
 foot.innerText = siteContent['footer']['copyright']
 
@@ -102,3 +105,6 @@ firstAnchor.style.color = 'green';
 let navigation = document.querySelector('nav');
 navigation.appendChild(lastAnchor);
 navigation.prepend(firstAnchor);
+
+button.addEventListener('click', (event) => {event.target.innerText = 'Has been clicked';});
+button.addEventListener('click', (event) => {event.target.style.backgroundColor = 'pink';});
