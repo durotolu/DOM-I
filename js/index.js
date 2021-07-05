@@ -40,3 +40,71 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let anchor = document.querySelectorAll('a');
+anchor[0].textContent = 'Services';
+anchor[1].innerText = 'Product';
+anchor[2].innerText = 'Vision';
+anchor[3].innerText = 'Features';
+anchor[4].innerText = 'About';
+anchor[5].innerText = 'Contact';
+
+let button = document.querySelector('.cta-text button');
+button.textContent = 'Get Started'
+
+let domText = document.querySelector('.cta-text h1');
+domText.innerText = 'DOM\nIS\nAWESOME';
+
+let circle = document.querySelector('#cta-img');
+circle.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let mainText = document.querySelectorAll('.main-content .text-content h4');
+mainText[0].innerText = siteContent['main-content']['features-h4'];
+mainText[1].innerText = siteContent['main-content']['about-h4'];
+mainText[2].innerText = siteContent['main-content']['services-h4'];
+mainText[3].innerText = siteContent['main-content']['product-h4'];
+mainText[4].innerText = siteContent['main-content']['vision-h4']; 
+
+let paragraphText = document.querySelectorAll('.main-content .text-content p');
+paragraphText[0].innerText = siteContent['main-content']['features-content'];
+paragraphText[1].innerText = siteContent['main-content']['about-content'];
+paragraphText[2].innerText = siteContent['main-content']['services-content'];
+paragraphText[3].innerText = siteContent['main-content']['product-content'];
+paragraphText[4].innerText = siteContent['main-content']['vision-content'];
+
+let lastImage = document.querySelector('#middle-img');
+lastImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let contact = document.querySelector('.contact h4');
+contact.innerText = siteContent['contact']['contact-h4'];
+
+let contactBody = document.querySelectorAll('.contact p');
+contactBody[0].innerText = siteContent['contact']['address'];
+contactBody[1].innerText = siteContent['contact']['phone'];
+contactBody[2].innerText = siteContent['contact']['email'];
+
+let contactColor = document.querySelector('.contact');
+contactColor.style.color = 'red';
+
+let foot = document.querySelector('footer p');
+foot.innerText = siteContent['footer']['copyright']
+
+let anchorLength = document.querySelectorAll('a').length;
+for (let i=0; i<anchorLength; i++) {
+  anchor[i].style.color = 'green';
+}
+
+let lastAnchor = document.createElement('a');
+lastAnchor.textContent = 'Whatever';
+lastAnchor.style.color = 'green';
+
+let firstAnchor = document.createElement('a');
+firstAnchor.textContent = 'You want';
+firstAnchor.style.color = 'green';
+
+let navigation = document.querySelector('nav');
+navigation.appendChild(lastAnchor);
+navigation.prepend(firstAnchor);
+
+button.addEventListener('click', (event) => {event.target.innerText = 'Has been clicked';});
+button.addEventListener('click', (event) => {event.target.style.backgroundColor = 'pink';});
